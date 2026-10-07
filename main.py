@@ -1,18 +1,14 @@
 import ask
 import student as st
+import fileio
 
 def clear():                # \x1b[2J = tømmer skjermen
     print("\x1b[2J\x1b[H")  # \x1b[H  = sender markøren til start
 
 def main():
+    json_file = "studentregister.json"
 
-    students: list[st.Student] = [
-        st.Student("Morten", 33, "Systemutvikling og Programmering"),
-        st.Student("Michael", 32, "Systemutvikling og Programmering"),
-        st.Student("Chris",   28, "It Drift og Sikkerhet"),
-        st.Student("Kenneth", 33, "It Drift og Sikkerhet"),
-        st.Student("Eren-Kevin", 30, "It Drift og Sikkerhet")
-    ]
+    students: list[st.Student] = fileio.load(json_file)
     options = [
         "Legg til student",
         "Vis alle studenter",
@@ -53,6 +49,7 @@ def main():
             case 5: # Avslutt
                 running = False
                 clear()
+                fileio.write(json_file, students)
 
 
 

@@ -9,6 +9,9 @@ class Student:
         self.age = age
         self.course = course
 
+    def toDict(self):
+        return {"f_name": self.f_name, "age": self.age, "course": self.course}
+
 
 def getStudent():
     print("--- Legg til student ---")
