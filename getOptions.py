@@ -28,13 +28,13 @@ def getOpt(opts: list[str]) -> int:
 
 
 # Eksempel
-options = [
-    "Legg til student",
-    "Se alle studenter",
-    "Fjern student",
-    "Søk etter student",
-    "Avslutt"
-]
+# options = [
+#     "Legg til student",
+#     "Se alle studenter",
+#     "Fjern student",
+#     "Søk etter student",
+#     "Avslutt"
+# ]
 
-n = getOpt(options)
-print(f"Du valgte {options[n]}")
+# n = getOpt(options)
+# print(f"Du valgte {options[n]}")
