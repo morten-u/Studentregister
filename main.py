@@ -20,10 +20,12 @@ def main():
     while running:
 
         clear()
+        print("--- STUDENTREGISTER ---")
         choice = opt.getOpt(options)
 
         match choice:
             case 0: # Legg til student
+                clear()
                 s = st.getStudent()
                 if s == None:
                     continue
@@ -31,6 +33,8 @@ def main():
                 students.append(s)
 
             case 1: # Vis alle studenter
+                clear()
+                st.showStudents(students)
                 pass
             case 2: # Søk etter student
                 pass
@@ -40,6 +44,7 @@ def main():
                 pass
             case 5: # Avslutt
                 running = False
+                clear()
 
 
 
