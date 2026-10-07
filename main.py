@@ -27,15 +27,13 @@ def main():
             case 0: # Legg til student
                 clear()
                 s = st.getStudent()
-                if s == None:
-                    continue
-                print(f"Student mottat!")
-                students.append(s)
+                if s:
+                    students.append(s)
 
             case 1: # Vis alle studenter
                 clear()
                 st.showStudents(students)
-                pass
+
             case 2: # Søk etter student
                 pass
             case 3: # Fjern student
