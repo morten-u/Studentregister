@@ -6,7 +6,13 @@ def clear():                # \x1b[2J = tømmer skjermen
 
 def main():
 
-    students: list[st.Student] = []
+    students: list[st.Student] = [
+        st.Student("Morten", 33, "Systemutvikling og Programmering"),
+        st.Student("Michael", 32, "Systemutvikling og Programmering"),
+        st.Student("Chris",   28, "It Drift og Sikkerhet"),
+        st.Student("Kenneth", 33, "It Drift og Sikkerhet"),
+        st.Student("Eren-Kevin", 30, "It Drift og Sikkerhet")
+    ]
     options = [
         "Legg til student",
         "Vis alle studenter",
@@ -35,8 +41,12 @@ def main():
                 st.showStudents(students)
 
             case 2: # Søk etter student
+                clear()
+                st.searchStudents(students)
                 pass
             case 3: # Fjern student
+                clear()
+                st.removeStudent(students)
                 pass
             case 4: # Vis antall studenter
                 pass
