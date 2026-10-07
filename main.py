@@ -1,4 +1,4 @@
-import getOptions as opt
+import ask
 import student as st
 
 def clear():                # \x1b[2J = tømmer skjermen
@@ -21,7 +21,7 @@ def main():
 
         clear()
         print("--- STUDENTREGISTER ---")
-        choice = opt.getOpt(options)
+        choice = ask.getOpt(options)
 
         match choice:
             case 0: # Legg til student
