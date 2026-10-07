@@ -47,9 +47,9 @@ def main():
             case 3: # Fjern student
                 clear()
                 st.removeStudent(students)
-                pass
             case 4: # Vis antall studenter
-                pass
+                clear()
+                st.studentCount(students)
             case 5: # Avslutt
                 running = False
                 clear()

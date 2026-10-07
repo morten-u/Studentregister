@@ -92,3 +92,8 @@ def removeStudent(students: list[Student]):
     rm_idx -= 1
     if ask.confirm(f"Fjern {ask.RED}{students[rm_idx].f_name}{ask.DEFAULT}"):
         students.remove(students[rm_idx])
+
+def studentCount(students: list[Student]):
+    print("--- Antall studenter ---")
+    print(f"Total antall: {len(students)}")
+    input("Press enter for å returnere: ")
