@@ -86,6 +86,13 @@ def searchStudents(students: list[Student]):
 
 def removeStudent(students: list[Student]):
     print("--- Fjern student ---")
+
+    if len(students) == 0:
+        print("Ingen studenter i register")
+        input("Press enter for å returnere: ")
+        return
+
+
     for i, s in enumerate(students):
         print(f"{ask.RED}{i + 1}{ask.DEFAULT}. {s.f_name:<10} {s.course}")
 
